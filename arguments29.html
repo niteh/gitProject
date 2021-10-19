@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    <script>
+    function printArguments(){
+
+      document.write( "Argument(s) length is " + arguments.length + " <br />")
+     for(let i = 0; i < arguments.length; i++){
+
+      document.write( "Argument is " + i +  " = " +  arguments[i] + " <br />")
+
+     }
+
+    }
+
+    printArguments();
+    printArguments(2,3,4);
+
+    function addNumbers(){
+
+      let result = 0;
+      for(var i = 0; i < arguments.length; i++){
+         result += arguments[i];
+
+      }
+      return result;
+
+
+    }
+
+    alert(addNumbers(2,2,2))
+     
+
+    function printArgumentNumbers(){
+      var argumentsArray = [].slice.call(arguments);
+      argumentsArray.sort();
+      document.write(argumentsArray);
+    }
+    printArgumentNumbers("A", "F", "D")
+
+
+ 
+
+
+  </script>
+    <script src="app.js"></script>
+</body>
+</html>
